@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Afriqiya Tours – Explorez l'Afrique avec Afriqiya Tours</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS externe -->
+  <link href="style.css" rel="stylesheet">
+</head>
+<body id="top">
+
+<!-- NAVBAR (brand centered; menus below the brand) -->
+<nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top">
+  <div class="container flex-column text-center">
+    <a class="navbar-brand fw-bold fs-3 mb-2" href="/index.html">Afriqiya <span class="brand-accent">Tours</span></a>
+
+    <!-- collapse toggler (mobile) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- menus (centered under brand) -->
+    <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+
+        <!-- Destinations dropdown (10 pays) -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="destDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Destinations
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="destDropdown">
+            <li><a class="dropdown-item" href="destinations/kenya.html">Kenya</a></li>
+            <li><a class="dropdown-item" href="destinations/tanzanie.html">Tanzanie</a></li>
+            <li><a class="dropdown-item" href="destinations/senegal.html">Sénégal</a></li>
+            <li><a class="dropdown-item" href="destinations/maroc.html">Maroc</a></li>
+            <li><a class="dropdown-item" href="destinations/afrique-du-sud.html">Afrique du Sud</a></li>
+            <li><a class="dropdown-item" href="destinations/egypte.html">Égypte</a></li>
+            <li><a class="dropdown-item" href="destinations/namibie.html">Namibie</a></li>
+            <li><a class="dropdown-item" href="destinations/madagascar.html">Madagascar</a></li>
+            <li><a class="dropdown-item" href="destinations/ghana.html">Ghana</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="#circuits">Circuits</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="a-propos.html">À propos</a></li>
+        <li class="nav-item"><a class="nav-link" href="connecter.html">Connecter</a></li>
+      </ul>
+
+      <a href="/contact.html" class="btn cta-reserve ms-lg-3">Réservez maintenant</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="accueil" class="hero d-flex align-items-center justify-content-center">
+  <div class="hero-content text-center">
+    <h1 class="display-4 fw-bold mb-3">Explorez l'Afrique avec Afriqiya Tours</h1>
+    <p class="lead mx-auto mb-4">Des voyages sur-mesure alliant authenticité africaine, confort moderne et découvertes inattendues.</p>
+
+    <div class="d-flex justify-content-center gap-3 flex-wrap mb-4">
+      <a href="#destinations" class="btn btn-cta btn-lg px-4">Découvrir les destinations</a>
+      <a href="#circuits" class="btn btn-outline-light btn-lg px-4">Voir nos circuits</a>
+    </div>
+  <div class="mt-2 d-flex justify-content-center gap-2 flex-wrap">
+      <span class="badge rounded-pill bg-light text-dark">Voyage sur-mesure</span>
+      <span class="badge rounded-pill bg-light text-dark">Voyage responsable</span>
+      <span class="badge rounded-pill bg-light text-dark">Guides francophones</span>
+    </div>
+  </div>
+</header>
+
+<main class="pt-5">
+
+<!-- DESTINATIONS (grid uniform) -->
+<section id="destinations" class="py-5">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h2 class="section-title">Nos destinations</h2>
+      <p class="muted">Découvrez nos 10 destinations africaines incontournables.</p>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4 mb-5 card-grid">
+      <!-- Card 1 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="images/Luxury Safari in Masai Mara, Kenya.jpeg" class="card-img-top" alt="Kenya">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Kenya – Masai Mara</h5>
+            <p class="card-text">Safaris et grands espaces, nuit sous les étoiles.</p>
+            <a href="/destinations/kenya.html" class="mt-auto btn btn-outline-primary">Explorer</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="images/Trek Kilimanjaro - Voyage Tanzanie.jpeg" class="card-img-top" alt="Tanzanie">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Tanzanie – Kilimandjaro & Zanzibar</h5>
+            <p class="card-text">Montagnes, plages et immersion culturelle.</p>
+            <a href="/destinations/tanzanie.html" class="mt-auto btn btn-outline-primary">Explorer</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="images/Laguna Somone, Senegal_ Salvato da That's me LAURA Negro.jpeg" class="card-img-top" alt="Sénégal">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Sénégal – Dakar & Saint-Louis</h5>
+            <p class="card-text">Culture, plages et patrimoine colonial.</p>
+            <a href="/destinations/senegal.html" class="mt-auto btn btn-outline-primary">Explorer</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="images/10 Reasons Morocco Should Be Your Next Travel Destination.jpeg" class="card-img-top" alt="Maroc">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Maroc – Marrakech & Sahara</h5>
+            <p class="card-text">Souks, dunes et culture millénaire.</p>
+            <a href="/destinations/maroc.html" class="mt-auto btn btn-outline-primary">Explorer</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="images/Le Cap, de la Table Mountain au Cap de Bonne Espérance - La terre est un jardin.jpeg" class="card-img-top" alt="Afrique du Sud">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Afrique du Sud – Cap & Kruger</h5>
+            <p class="card-text">Vignobles, côtes et safaris spectaculaires.</p>
+            <a href="/destinations/afrique-du-sud.html" class="mt-auto btn btn-outline-primary">Explorer</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="images/Image of the Egyptian 3 pyramids with the Nile River in the background.jpeg" class="card-img-top" alt="Égypte">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Égypte – Le Nil & Pyramides</h5>
+            <p class="card-text">Histoire, temples et monuments anciens.</p>
+            <a href="/destinations/egypte.html" class="mt-auto btn btn-outline-primary">Explorer</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="images/Scenic Namib Desert Stays with Hotala.jpeg" class="card-img-top" alt="Namibie">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Namibie – Déserts & Safaris</h5>
+            <p class="card-text">Paysages uniques et expériences immersives.</p>
+            <a href="/destinations/namibie.html" class="mt-auto btn btn-outline-primary">Explorer</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="/images/Madagascar_ Island of Endemism.jpeg" class="card-img-top" alt="Madagascar">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Madagascar – Nature & Aventure</h5>
+            <p class="card-text">Faune unique, plages et forêts tropicales.</p>
+            <a href="/destinations/madagascar.html" class="mt-auto btn btn-outline-primary">Explorer</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 9 -->
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="/images/Aburi, Ghana 🇬🇭.jpeg" class="card-img-top" alt="Ghana">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Ghana – Accra & Culture</h5>
+            <p class="card-text">Traditions vivantes et plages magnifiques.</p>
+            <a href="/destinations/ghana.html" class="mt-auto btn btn-outline-primary">Explorer</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CIRCUITS -->
+<section id="circuits" class="py-5">
+  <div class="container text-center">
+    <h2 class="section-title mb-4">Nos circuits</h2>
+    <p class="muted mb-5">Découvrez nos circuits thématiques pour vivre une expérience unique en Afrique et ailleurs.</p>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="images/21 Travel Inspirations That Will Ignite Your Wanderlust and Change Your Life!.jpeg" class="card-img-top" alt="Safari">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Safari Aventure</h5>
+            <p class="card-text">Rencontrez la faune sauvage africaine dans des safaris encadrés par des guides locaux.</p>
+            <a href="/circuits/safari-aventure.html" class="mt-auto btn btn-outline-primary">Découvrir</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="images/télécharger (1)30.jpeg" class="card-img-top" alt="Culture">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Circuit Culturel</h5>
+            <p class="card-text">Explorez l’histoire, les traditions et la gastronomie des régions visitées.</p>
+            <a href="/circuits/circuit-culturel.html" class="mt-auto btn btn-outline-primary">Découvrir</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="images/télécharger (5).jpeg" class="card-img-top" alt="Plages">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Séjour Plage</h5>
+            <p class="card-text">Profitez des plus belles plages africaines pour un séjour relaxant et paradisiaque.</p>
+            <a href="/circuits/sejour-plage.html" class="mt-auto btn btn-outline-primary">Découvrir</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="section-title mb-4">Nos services</h2>
+    <p class="muted mb-5">Nous offrons des services sur-mesure pour rendre votre voyage confortable et inoubliable.</p>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100 text-center p-3 shadow-sm">
+          <i class="bi bi-geo-alt display-4 mb-3 text-primary"></i>
+          <h5 class="card-title">Guides locaux</h5>
+          <p class="card-text">Accompagnement par des guides expérimentés et francophones.</p>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center p-3 shadow-sm">
+          <i class="bi bi-house-door display-4 mb-3 text-primary"></i>
+          <h5 class="card-title">Hébergement premium</h5>
+          <p class="card-text">Des hébergements confortables et authentiques pour chaque étape de votre voyage.</p>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 text-center p-3 shadow-sm">
+          <i class="bi bi-car-front display-4 mb-3 text-primary"></i>
+          <h5 class="card-title">Transport sécurisé</h5>
+          <p class="card-text">Des transferts et trajets en toute sécurité avec des véhicules modernes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog" class="py-5">
+  <div class="container text-center">
+    <h2 class="section-title mb-4">Blog & Inspirations</h2>
+    <p class="muted mb-5">Découvrez nos articles et conseils pour préparer votre voyage de rêve.</p>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="images/21 Travel Inspirations That Will Ignite Your Wanderlust and Change Your Life!.jpeg" class="card-img-top" alt="Blog 1">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">🧳 Blog 1 — Bien préparer son voyage en Afrique</h5>
+            <p class="card-text">Découvrez nos conseils essentiels pour voyager sereinement à travers le continent africain. De la valise parfaite aux formalités à ne pas oublier, partez prêts à vivre une expérience inoubliable ! 🌅</p>
+            <a href="/blog.html/blog1.html" class="mt-auto btn btn-outline-primary">Lire l'article</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="images/télécharger (1)30.jpeg" class="card-img-top" alt="Blog 2">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">🌺 Blog 2 — Culture et traditions africaines</h5>
+            <p class="card-text">Plongez au cœur de la richesse culturelle du continent : coutumes, artisanat, gastronomie et mode de vie. Comprendre l’Afrique, c’est aussi la vivre intensément. ✨</p>
+            <a href="/blog.html/blog2.html" class="mt-auto btn btn-outline-primary">Lire l'article</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="images/télécharger (5).jpeg" class="card-img-top" alt="Blog 3">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">🌿 Blog 3 — Voyager responsable</h5>
+            <p class="card-text">Explorez une Afrique authentique tout en préservant sa beauté naturelle. Découvrez comment adopter un tourisme durable pour un voyage qui a du sens et un impact positif. 🌱</p>
+            <a href="/blog.html/blog3.html" class="mt-auto btn btn-outline-primary">Lire l'article</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="temoignages" class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="section-title mb-4">Témoignages</h2>
+    <p class="muted mb-5">Ce que nos clients disent de leurs voyages avec Afriqiya Tours.</p>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+      <div class="col d-flex justify-content-center">
+        <div class="testimonial">
+          <img src="PERSONNES/envato-labs-ai-cfa49f21-fcf7-44cc-b920-20d35229dab3.jpg" class="avatar" alt="Amina">
+          <strong>Amina</strong><br>
+          <small class="muted">Safari Kenya</small>
+          <p class="mt-3">“Une organisation parfaite, des guides passionnés et des émotions fortes. Je recommande Afriqiya Tours !”</p>
+          <div class="text-warning">★★★★★</div>
+        </div>
+      </div>
+
+      <div class="col d-flex justify-content-center">
+        <div class="testimonial">
+          <img src="PERSONNES/envato-labs-ai-2fb363ab-2008-45c9-916b-49c6e7e1a159.jpg" class="avatar" alt="Moussa">
+          <strong>Moussa</strong><br>
+          <small class="muted">Maroc & Sénégal</small>
+          <p class="mt-3">“Itinéraires soignés et découvertes authentiques. Très bon rapport qualité/prix.”</p>
+          <div class="text-warning">★★★★★</div>
+        </div>
+      </div>
+
+      <div class="col d-flex justify-content-center">
+        <div class="testimonial">
+          <img src="PERSONNES/Namibia.jpeg" class="avatar" alt="Fatou">
+          <strong>Fatou</strong><br>
+          <small class="muted">Afrique du Sud & Namibie</small>
+          <p class="mt-3">“Des souvenirs inoubliables — des safaris aux paysages époustouflants, tout était parfait.”</p>
+          <div class="text-warning">★★★★★</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT CTA -->
+<section id="contact-cta" class="py-5 text-center">
+  <div class="container">
+    <h3 class="mb-3">Prêt à réserver ou à en savoir plus ?</h3>
+    <p class="mb-4">Contactez notre équipe pour construire votre voyage sur-mesure.</p>
+    <a href="contact.html" class="btn btn-cta btn-lg">Contactez-nous</a>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer mt-5 bg-dark text-light py-5">
+  <div class="container text-center">
+    <p>&copy; 2025 Afriqiya Tours. Tous droits réservés.</p>
+    <p>Afriqiya Tours est votre partenaire pour des voyages sur mesure à travers l'Afrique et le monde. Notre mission est de vous offrir des expériences uniques, confortables et mémorables, en vous accompagnant à chaque étape de votre aventure.</p>
+    <div class="contact-info mb-3">
+      <p><strong>Téléphone :</strong> +221 77 432 47 63 / +221 77 567 09 78</p>
+      <p><strong>Email :</strong> <a href="mailto:contact@afriqiyatours.com" class="text-light">contact@afriqiyatours.com</a></p>
+      <p><strong>Adresse :</strong> Avenue LAMINE GUEYE, Dakar</p>
+    </div>
+
+    <div class="social-links mb-3">
+      <a href="#" class="text-light mx-2" aria-label="facebook"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="text-light mx-2" aria-label="instagram"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="text-light mx-2" aria-label="twitter"><i class="bi bi-twitter"></i></a>
+      <a href="#" class="text-light mx-2" aria-label="youtube"><i class="bi bi-youtube"></i></a>
+    </div>
+
+    <small>Développé par <strong>LuminaDev</strong></small>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Script externe -->
+<script src="script.js"></script>
+</body>
+</html>

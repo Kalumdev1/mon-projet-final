@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact – Afriqiya Tours</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --brand-dark: #0D1B2A;
+      --brand-warm: #C89F5F;
+      --brand-olive: #2F5D45;
+      --muted: #6b6b6b;
+      --bg: #f7f6f2;
+    }
+
+    body { font-family: 'Poppins', sans-serif; color: var(--brand-dark); background: var(--bg); margin:0; }
+    a { text-decoration:none; }
+
+    /* Navbar */
+    .navbar { align-items:center; background: rgba(255,255,255,0.98); padding:.6rem 0; box-shadow:0 0 0 transparent; transition:.25s; z-index:1100; }
+    .navbar .navbar-brand { color: var(--brand-dark); }
+    .brand-accent { color: var(--brand-warm); }
+    .nav-link { color: var(--brand-dark); margin:0 .35rem; }
+    .nav-link:hover { color: var(--brand-olive); }
+    .btn-cta { background: linear-gradient(90deg,var(--brand-olive),var(--brand-warm)); border:none; color:#fff; font-weight:600; }
+    .cta-reserve { background: var(--brand-warm); color: var(--brand-dark); font-weight:700; padding:.55rem .9rem; border-radius:.45rem; }
+
+    /* Hero */
+    .hero { min-height:450px; position:relative; display:flex; align-items:center; justify-content:center; color:#fff; text-shadow:0 4px 18px rgba(0,0,0,.45); padding-top:5.2rem; padding-bottom:5.2rem; background: url('/images/Africa.jpeg') center/cover no-repeat; }
+    .hero::after { content:""; position:absolute; inset:0; background: rgba(13,27,42,0.5); z-index:1; }
+    .hero-content { position:relative; z-index:2; text-align:center; max-width:800px; padding:0 18px; }
+    .hero h1 { font-weight:700; margin-bottom:.5rem; font-size:2.5rem; }
+    .hero p { color:#f1f1f1; max-width:780px; margin:0 auto 1.25rem; }
+
+    /* Formulaire */
+    .form-section { background:#fff; max-width:700px; margin:3rem auto; padding:30px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,.08); }
+    .form-section h2 { color: var(--brand-dark); font-weight:700; margin-bottom:1rem; text-align:center; }
+    .form-control:focus { box-shadow:none; border-color: var(--brand-olive); }
+    .btn-submit { background: var(--brand-warm); color:#0D1B2A; font-weight:700; width:100%; }
+
+    /* Footer */
+    footer { background: var(--brand-dark); color: var(--brand-warm); padding:40px 0; text-align:center; }
+    footer a { color: var(--brand-warm); }
+
+    /* CTA bottom */
+    .cta-bottom { background: var(--brand-olive); color:#fff; text-align:center; padding:20px 0; margin-top:2rem; }
+    .cta-bottom a { color:#fff; font-weight:700; text-decoration:none; }
+
+    @media(max-width:576px){.hero{min-height:300px;}}
+  </style>
+</head>
+<body id="top">
+
+<!-- NAVBAR (brand centered; menus below the brand) -->
+<nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top">
+  <div class="container flex-column text-center">
+    <a class="navbar-brand fw-bold fs-3 mb-2" href="/index.html">Afriqiya <span class="brand-accent">Tours</span></a>
+
+    <!-- collapse toggler (mobile) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- menus (centered under brand) -->
+    <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+
+        <!-- Destinations dropdown (10 pays) -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="destDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Destinations
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="destDropdown">
+            <li><a class="dropdown-item" href="/destinations/kenya.html">Kenya</a></li>
+            <li><a class="dropdown-item" href="/destinations/tanzanie.html">Tanzanie</a></li>
+            <li><a class="dropdown-item" href="/destinations/senegal.html">Sénégal</a></li>
+            <li><a class="dropdown-item" href="/destinations/maroc.html">Maroc</a></li>
+            <li><a class="dropdown-item" href="/destinations/afrique-du-sud.html">Afrique du Sud</a></li>
+            <li><a class="dropdown-item" href="/destinations/egypte.html">Égypte</a></li>
+            <li><a class="dropdown-item" href="/destinations/namibie.html">Namibie</a></li>
+            <li><a class="dropdown-item" href="/destinations/madagascar.html">Madagascar</a></li>
+            <li><a class="dropdown-item" href="/destinations/ghana.html">Ghana</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="/index.html#circuits">Circuits</a></li>
+        <li class="nav-item"><a class="nav-link" href="/index.html#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="/index.html#blog">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="a-propos.html">À propos</a></li>
+        <li class="nav-item"><a class="nav-link" href="connecter.html">Connecter</a></li>
+      </ul>
+
+      <a href="/index.html" class="btn cta-reserve ms-lg-3">Nous-contactez</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero d-flex align-items-center justify-content-center">
+  <div class="hero-content">
+    <h1>Contactez Afriqiya Tours</h1>
+    <p>Une question, une demande spéciale ou une suggestion ? Envoyez-nous un message, nous sommes là pour vous répondre rapidement.</p>
+    <a href="#formulaire" class="btn btn-cta btn-lg px-4">Envoyer un message</a>
+  </div>
+</header>
+
+<!-- FORMULAIRE DE CONTACT -->
+<section id="formulaire" class="form-section">
+  <h2>Formulaire de Contact</h2>
+  <form id="contactForm" novalidate>
+    <div class="mb-3">
+      <label for="nom" class="form-label">Nom complet *</label>
+      <input type="text" class="form-control" id="nom" required>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email *</label>
+      <input type="email" class="form-control" id="email" required>
+    </div>
+    <div class="mb-3">
+      <label for="sujet" class="form-label">Sujet</label>
+      <input type="text" class="form-control" id="sujet">
+    </div>
+    <div class="mb-3">
+      <label for="message" class="form-label">Message *</label>
+      <textarea class="form-control" id="message" rows="4" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-submit btn-lg">Envoyer</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer mt-5 bg-dark text-light py-5">
+  <div class="container text-center">
+    <p>&copy; 2025 Afriqiya Tours. Tous droits réservés.</p>
+    <p>Afriqiya Tours est votre partenaire pour des voyages sur mesure à travers l'Afrique et le monde. Notre mission est de vous offrir des expériences uniques, confortables et mémorables, en vous accompagnant à chaque étape de votre aventure.</p>
+    <div class="contact-info mb-3">
+      <p><strong>Téléphone :</strong> +221 77 432 47 63 / +221 77 567 09 78</p>
+      <p><strong>Email :</strong> <a href="mailto:contact@afriqiyatours.com" class="text-light">contact@afriqiyatours.com</a></p>
+      <p><strong>Adresse :</strong> Avenue LAMINE GUEYE, Dakar</p>
+    </div>
+
+    <div class="social-links mb-3">
+      <a href="#" class="text-light mx-2" aria-label="facebook"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="text-light mx-2" aria-label="instagram"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="text-light mx-2" aria-label="twitter"><i class="bi bi-twitter"></i></a>
+      <a href="#" class="text-light mx-2" aria-label="youtube"><i class="bi bi-youtube"></i></a>
+    </div>
+
+    <small>Développé par <strong>LuminaDev</strong></small>
+  </div>
+</footer>
+
+
+<!-- Bootstrap JS + validation -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const nom = document.getElementById('nom').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+    if(nom === "" || email === "" || message === ""){
+      alert("Veuillez remplir les champs obligatoires : Nom, Email et Message.");
+      return;
+    }
+    alert("Merci pour votre message ! Nous reviendrons vers vous rapidement.");
+    form.reset();
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Circuit Culturel | Afriqiya Tours</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --brand-dark: #0D1B2A;
+      --brand-warm: #C89F5F;
+      --brand-olive: #2F5D45;
+      --muted: #6b6b6b;
+      --bg: #f7f6f2;
+    }
+    body { font-family: 'Poppins', sans-serif; color: var(--brand-dark); background: var(--bg); margin:0; }
+    a { text-decoration:none; }
+    img { max-width:100%; display:block; }
+
+    /* Navbar */
+    .navbar { align-items:center; background: rgba(255,255,255,0.98); padding:.6rem 0; box-shadow:0 0 0 transparent; transition:.25s; z-index:1100; }
+    .navbar .navbar-brand { color: var(--brand-dark); }
+    .brand-accent { color: var(--brand-warm); }
+    .nav-link { color: var(--brand-dark); margin:0 .35rem; }
+    .nav-link:hover { color: var(--brand-olive); }
+    .btn-cta { background: linear-gradient(90deg,var(--brand-olive),var(--brand-warm)); border:none; color:#fff; font-weight:600; }
+    .cta-reserve { background: var(--brand-warm); color: var(--brand-dark); font-weight:700; padding:.55rem .9rem; border-radius:.45rem; }
+
+    /* Hero */
+    .hero { min-height:500px; position:relative; display:flex; align-items:center; justify-content:center; color:#fff; text-shadow:0 4px 18px rgba(0,0,0,.45); padding-top:5.2rem; padding-bottom:5.2rem; overflow:hidden; background: url('images/culture-hero.jpeg') center/cover no-repeat; }
+    .hero::after { content:""; position:absolute; inset:0; background: linear-gradient(180deg, rgba(13,27,42,0.3), rgba(13,27,42,0.6)); z-index:1; }
+    .hero-content { position:relative; z-index:2; text-align:center; max-width:980px; padding:0 18px; }
+    .hero h1 { font-weight:700; margin-bottom:.5rem; font-size:2.5rem; }
+    .hero p { color:#f1f1f1; max-width:880px; margin:0 auto 1.25rem; }
+
+    /* Section titles */
+    .section-title { color: var(--brand-dark); font-weight:700; margin-bottom:.5rem; font-size:1.8rem; }
+    .muted { color: var(--muted); }
+
+    /* Card grid */
+    .card-grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap:1.5rem; margin-top:2rem; }
+    .card-slider { border-radius:12px; overflow:hidden; background:#fff; display:flex; flex-direction:column; flex:1; box-shadow:0 6px 18px rgba(0,0,0,.08); transition:.25s; cursor:pointer; }
+    .card-slider:hover { transform:translateY(-6px); box-shadow:0 12px 30px rgba(0,0,0,.12); }
+    .card-slider img { width:100%; height:180px; object-fit:cover; }
+    .card-body-slider { padding:18px; display:flex; flex-direction:column; flex:1; gap:.5rem; }
+    .card-title-slider { font-weight:700; color:var(--brand-dark); margin-bottom:.3rem; }
+    .card-text-slider { color:var(--muted); flex:1; }
+
+    /* Footer */
+    footer { background: var(--brand-dark); color: var(--brand-warm); padding:40px 0; text-align:center; }
+    footer a { color: var(--brand-warm); }
+
+  </style>
+</head>
+<body id="top">
+
+<!-- NAVBAR (brand centered; menus below the brand) -->
+<nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top">
+  <div class="container flex-column text-center">
+    <a class="navbar-brand fw-bold fs-3 mb-2" href="#top">Afriqiya <span class="brand-accent">Tours</span></a>
+
+    <!-- collapse toggler (mobile) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- menus (centered under brand) -->
+    <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="#accueil">Accueil</a></li>
+
+        <!-- Destinations dropdown (10 pays) -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="destDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Destinations
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="destDropdown">
+            <li><a class="dropdown-item" href="destinations/kenya.html">Kenya</a></li>
+            <li><a class="dropdown-item" href="destinations/tanzanie.html">Tanzanie</a></li>
+            <li><a class="dropdown-item" href="destinations/senegal.html">Sénégal</a></li>
+            <li><a class="dropdown-item" href="destinations/maroc.html">Maroc</a></li>
+            <li><a class="dropdown-item" href="destinations/afrique-du-sud.html">Afrique du Sud</a></li>
+            <li><a class="dropdown-item" href="destinations/egypte.html">Égypte</a></li>
+            <li><a class="dropdown-item" href="destinations/namibie.html">Namibie</a></li>
+            <li><a class="dropdown-item" href="destinations/madagascar.html">Madagascar</a></li>
+            <li><a class="dropdown-item" href="destinations/ghana.html">Ghana</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="#circuits">Circuits</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="a-propos.html">À propos</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+
+      <a href="#formulaire" class="btn cta-reserve ms-lg-3">S'inscrire</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="accueil" class="hero d-flex align-items-center justify-content-center">
+  <div class="hero-content text-center">
+    <h1 class="display-4 fw-bold mb-3">Circuit Culturel</h1>
+    <p class="lead mx-auto mb-4">Explorez l’histoire, les traditions et la gastronomie des pays africains avec nos circuits immersifs.</p>
+  </div>
+</header>
+
+<main class="pt-5 container">
+
+  <!-- GRID CULTURE -->
+  <section id="cultural-circuit" class="py-5">
+    <h2 class="section-title text-center mb-4">Nos destinations culturelles</h2>
+    <div class="card-grid">
+
+      <!-- Kenya -->
+      <div class="card-slider" data-bs-toggle="modal" data-bs-target="#modalKenya">
+        <img src="/Les 9 destinations culturelles/The Maasai Jump.jpeg" alt="Kenya">
+        <div class="card-body-slider">
+          <h5 class="card-title-slider">Kenya</h5>
+          <p class="card-text-slider">Découvrez les traditions et la diversité ethnique.</p>
+        </div>
+      </div>
+
+      <!-- Tanzanie -->
+      <div class="card-slider" data-bs-toggle="modal" data-bs-target="#modalTanzanie">
+        <img src="/Les 9 destinations culturelles/Zanzibar, Tanzania_ 📸_ ellieneeper.jpeg" alt="Tanzanie">
+        <div class="card-body-slider">
+          <h5 class="card-title-slider">Tanzanie</h5>
+          <p class="card-text-slider">Immersion dans les cultures locales et paysages uniques.</p>
+        </div>
+      </div>
+
+      <!-- Sénégal -->
+      <div class="card-slider" data-bs-toggle="modal" data-bs-target="#modalSenegal">
+        <img src="/Les 9 destinations culturelles/télécharger (6.0).jpeg" alt="Sénégal">
+        <div class="card-body-slider">
+          <h5 class="card-title-slider">Sénégal</h5>
+          <p class="card-text-slider">Musique, danse et gastronomie authentiques.</p>
+        </div>
+      </div>
+
+      <!-- Maroc -->
+      <div class="card-slider" data-bs-toggle="modal" data-bs-target="#modalMaroc">
+        <img src="/Les 9 destinations culturelles/Moroccan Amazigh man on a horse.jpeg" alt="Maroc">
+        <div class="card-body-slider">
+          <h5 class="card-title-slider">Maroc</h5>
+          <p class="card-text-slider">Histoire millénaire et artisanat raffiné.</p>
+        </div>
+      </div>
+
+      <!-- Afrique du Sud -->
+      <div class="card-slider" data-bs-toggle="modal" data-bs-target="#modalAfSud">
+        <img src="/Les 9 destinations culturelles/télécharger (7.0).jpeg" alt="Afrique du Sud">
+        <div class="card-body-slider">
+          <h5 class="card-title-slider">Afrique du Sud</h5>
+          <p class="card-text-slider">Culture riche et patrimoine diversifié.</p>
+        </div>
+      </div>
+
+      <!-- Egypte -->
+      <div class="card-slider" data-bs-toggle="modal" data-bs-target="#modalEgypte">
+        <img src="/Les 9 destinations culturelles/télécharger (8).jpeg" alt="Egypte">
+        <div class="card-body-slider">
+          <h5 class="card-title-slider">Egypte</h5>
+          <p class="card-text-slider">Pharaons, pyramides et traditions anciennes.</p>
+        </div>
+      </div>
+
+      <!-- Namibie -->
+      <div class="card-slider" data-bs-toggle="modal" data-bs-target="#modalNamibie">
+        <img src="/Les 9 destinations culturelles/Namibie _ Tournage au pays des 1000 déserts • POESY by Sophie.jpeg" alt="Namibie">
+        <div class="card-body-slider">
+          <h5 class="card-title-slider">Namibie</h5>
+          <p class="card-text-slider">Peuples Himba et paysages désertiques.</p>
+        </div>
+      </div>
+
+      <!-- Madagascar -->
+      <div class="card-slider" data-bs-toggle="modal" data-bs-target="#modalMadagascar">
+        <img src="/Les 9 destinations culturelles/télécharger (9).jpeg" alt="Madagascar">
+        <div class="card-body-slider">
+          <h5 class="card-title-slider">Madagascar</h5>
+          <p class="card-text-slider">Ethnies variées et traditions ancestrales.</p>
+        </div>
+      </div>
+
+      <!-- Ghana -->
+      <div class="card-slider" data-bs-toggle="modal" data-bs-target="#modalGhana">
+        <img src="/Les 9 destinations culturelles/Africa 🧳.jpeg" alt="Ghana">
+        <div class="card-body-slider">
+          <h5 class="card-title-slider">Ghana</h5>
+          <p class="card-text-slider">Riche héritage culturel et artisanat coloré.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION SEJOUR PLAGE -->
+  <section class="py-5 text-center">
+    <h2 class="section-title mb-3">Envie de détente après votre circuit culturel ?</h2>
+    <p class="mb-4">Découvrez les plus belles plages africaines pour un séjour relaxant et paradisiaque.</p>
+    <a href="/circuits/sejour-plage.html" class="btn btn-cta btn-lg">Découvrir Séjour Plage</a>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer mt-5 bg-dark text-light py-5">
+  <div class="container text-center">
+    <p>&copy; 2025 Afriqiya Tours. Tous droits réservés.</p>
+    <p>Afriqiya Tours est votre partenaire pour des voyages sur mesure à travers l'Afrique et le monde. Notre mission est de vous offrir des expériences uniques, confortables et mémorables, en vous accompagnant à chaque étape de votre aventure.</p>
+    <div class="contact-info mb-3">
+      <p><strong>Téléphone :</strong> +221 77 432 47 63 / +221 77 567 09 78</p>
+      <p><strong>Email :</strong> <a href="mailto:contact@afriqiyatours.com" class="text-light">contact@afriqiyatours.com</a></p>
+      <p><strong>Adresse :</strong> Avenue LAMINE GUEYE, Dakar</p>
+    </div>
+
+    <div class="social-links mb-3">
+      <a href="#" class="text-light mx-2" aria-label="facebook"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="text-light mx-2" aria-label="instagram"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="text-light mx-2" aria-label="twitter"><i class="bi bi-twitter"></i></a>
+      <a href="#" class="text-light mx-2" aria-label="youtube"><i class="bi bi-youtube"></i></a>
+    </div>
+
+    <small>Développé par <strong>LuminaDev</strong></small>
+  </div>
+</footer>
+
+
+<!-- MODALS CULTURE -->
+<div class="modal fade" id="modalKenya" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Kenya</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Le Kenya est un pays riche en diversité culturelle et ethnique. De Nairobi aux villages Masai, découvrez les traditions ancestrales, la musique, la danse et la gastronomie locale. L’histoire coloniale et post-coloniale se mêle aux coutumes africaines, offrant une expérience immersive unique.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalTanzanie" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Tanzanie</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>La Tanzanie vous plonge au cœur des cultures locales avec ses villages Maasai, la langue Swahili, et ses marchés traditionnels. Explorez l’histoire des peuples de la région et savourez des plats typiques tout en admirant des paysages naturels époustouflants.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalSenegal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Sénégal</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Le Sénégal est un pays où la musique, la danse et la gastronomie reflètent son identité culturelle. Dakar, Saint-Louis et le Siné-Saloum vous feront découvrir les traditions, l’artisanat et les cérémonies locales, offrant un voyage immersif dans l’histoire sénégalaise.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalMaroc" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Maroc</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Le Maroc allie histoire millénaire et artisanat raffiné. Des souks de Marrakech aux médinas historiques de Fès, découvrez les coutumes locales, la cuisine marocaine et l’artisanat traditionnel dans un cadre culturel fascinant.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalAfSud" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Afrique du Sud</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>L’Afrique du Sud possède un patrimoine culturel très riche, avec des ethnies variées et une histoire mouvementée. Visitez les townships, savourez la cuisine locale, et découvrez les traditions ancestrales des peuples Zulu, Xhosa et autres communautés.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalEgypte" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Egypte</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Plongez dans l’histoire des pharaons et des pyramides. L’Egypte offre un voyage dans le temps, entre sites archéologiques, traditions locales, artisanat et culture millénaire toujours vivante dans la vie quotidienne des Egyptiens.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalNamibie" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Namibie</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>La Namibie vous fait découvrir les peuples Himba, la culture San, et des paysages désertiques impressionnants. L’immersion dans les traditions locales et la rencontre avec les communautés rurales offrent une expérience culturelle unique.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalMadagascar" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Madagascar</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Madagascar est un mélange fascinant d’ethnies et de traditions. Explorez les villages, découvrez l’artisanat local, les cérémonies ancestrales et les coutumes uniques qui font de Madagascar un lieu culturel hors du commun.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalGhana" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Ghana</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Le Ghana offre un riche héritage culturel, avec des villages traditionnels, l’artisanat coloré, la danse et la musique locales. Découvrez les rites ancestraux et la diversité ethnique qui font la richesse culturelle du pays.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Blog 1 – Conseils pour bien préparer son voyage | Afriqiya Tours</title>
+
+  <!-- Optional: Bootstrap for navbar collapse (keeps look consistent) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --brand-dark: #0D1B2A;   /* deep navy */
+      --brand-warm: #C89F5F;   /* warm gold */
+      --brand-olive: #2F5D45;  /* olive green */
+      --muted: #6b6b6b;
+      --bg: #f7f6f2;
+      --container-width: 1150px;
+      --navbar-height: 72px;
+    }
+
+    /* RESET & BASE */
+    *{box-sizing:border-box}
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--brand-dark);
+      background: var(--bg);
+      margin: 0;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height: 1.6;
+    }
+    a { text-decoration: none; color: inherit; }
+
+    /* NAVBAR - same structure as the main site */
+    .navbar {
+      align-items: center;
+      background: rgba(255,255,255,0.98);
+      transition: all 0.25s ease;
+      padding: .6rem 0;
+      z-index: 1100;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+    .navbar.scrolled { box-shadow: 0 8px 24px rgba(13,27,42,0.08); }
+    .navbar .navbar-brand { color: var(--brand-dark); font-weight:700; }
+    .brand-accent { color: var(--brand-warm); }
+    .nav-link { color: var(--brand-dark); margin: 0 .35rem; font-weight:600; }
+    .nav-link:hover { color: var(--brand-olive); }
+    .cta-reserve { background: var(--brand-warm); color: var(--brand-dark); font-weight:700; padding: .5rem .85rem; border-radius: .45rem; }
+
+    /* HERO - parallax feel */
+    .hero {
+      height: 78vh;
+      min-height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      color: #fff;
+      text-align: center;
+      padding-top: var(--navbar-height);
+      background-image: url('/Mahali\ Mzuri.jpeg');
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
+      box-shadow: inset 0 0 0 2000px rgba(13,27,42,0.25);
+    }
+    .hero-inner {
+      max-width: var(--container-width);
+      padding: 0 20px;
+    }
+    .hero h1 {
+      font-size: clamp(1.8rem, 3.4vw, 3rem);
+      margin: 0 0 .6rem;
+      font-weight:700;
+      letter-spacing: -0.4px;
+      transform: translateY(8px);
+      animation: heroFade 900ms ease both;
+    }
+    .hero p {
+      margin: 0 auto;
+      color: #f1f1f1;
+      max-width: 860px;
+      font-size: 1.05rem;
+      opacity: .95;
+      animation: heroFade 1200ms ease both;
+    }
+    @keyframes heroFade {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* MAIN CONTAINER */
+    main { padding-top: calc(var(--navbar-height) + 18px); }
+
+    .container-narrow {
+      max-width: var(--container-width);
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    .kicker {
+      display:inline-block;
+      background:#fff;
+      padding:8px 12px;
+      border-radius:999px;
+      font-weight:700;
+      color:var(--brand-olive);
+      box-shadow: 0 6px 18px rgba(47,93,69,0.06);
+      margin-bottom: 18px;
+    }
+
+    h2.section-title {
+      color: var(--brand-dark);
+      font-weight:700;
+      margin: 4px 0 22px;
+      font-size: 1.6rem;
+      text-align:left;
+    }
+
+    .lead {
+      color:var(--muted);
+      margin-bottom: 28px;
+    }
+
+    /* Two-column intro */
+    .intro {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 28px;
+      align-items: start;
+      margin-bottom: 36px;
+    }
+    .intro .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 18px;
+      box-shadow: 0 10px 28px rgba(13,27,42,0.06);
+    }
+    .intro .card h3 { margin-top:0; }
+    .intro .aside {
+      position: sticky;
+      top: calc(var(--navbar-height) + 24px);
+      height: fit-content;
+    }
+
+    /* Sections */
+    .section-block {
+      margin: 32px 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .panel {
+      background: #fff;
+      padding: 22px;
+      border-radius: 12px;
+      box-shadow: 0 8px 22px rgba(13,27,42,0.05);
+      opacity: 0;
+      transform: translateY(12px);
+      transition: all 520ms cubic-bezier(.2,.9,.2,1);
+    }
+    .panel.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .panel h4 { margin-top:0; color:var(--brand-dark); }
+    .panel p { color:var(--muted); margin-bottom: 0.75rem; }
+
+    /* icons + bullets */
+    .steps { display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin-top: 12px; }
+    .step {
+      background: linear-gradient(180deg, #fff, #faf9f6);
+      padding: 14px;
+      border-radius: 10px;
+      border:1px solid rgba(13,27,42,0.03);
+    }
+    .step strong { display:block; margin-bottom:6px; color:var(--brand-dark); }
+
+    /* CTA strip */
+    .cta-strip {
+      margin: 40px 0 10px;
+      background: linear-gradient(90deg, rgba(200,159,95,0.08), rgba(47,93,69,0.04));
+      padding: 22px;
+      border-radius: 12px;
+      display:flex;
+      justify-content: space-between;
+      align-items:center;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+    .cta-strip .text { color:var(--brand-dark); font-weight:700; }
+    .btn-cta {
+      background: var(--brand-warm);
+      color: var(--brand-dark);
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-weight:700;
+      border:none;
+      cursor:pointer;
+    }
+
+    /* small cards grid (images + captions) */
+    .grid-cards {
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      gap:16px;
+      margin-top:18px;
+    }
+    .img-card {
+      border-radius:12px;
+      overflow:hidden;
+      background:#fff;
+      box-shadow: 0 8px 22px rgba(13,27,42,0.05);
+    }
+    .img-card img { width:100%; height:160px; object-fit:cover; display:block; }
+    .img-card .meta { padding:12px; }
+
+    /* back-to-top */
+    #toTop {
+      position: fixed;
+      right: 20px;
+      bottom: 22px;
+      background: var(--brand-olive);
+      color: #fff;
+      padding: 10px 12px;
+      border-radius: 999px;
+      box-shadow: 0 8px 20px rgba(47,93,69,0.15);
+      display:none;
+      cursor:pointer;
+      z-index:1200;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--brand-dark);
+      color: var(--brand-warm);
+      padding: 40px 20px;
+      text-align:center;
+      margin-top: 60px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 980px){
+      .intro { grid-template-columns: 1fr; }
+      .hero { background-attachment: scroll; height:60vh; }
+      .container-narrow { padding: 36px 16px; }
+    }
+    @media (max-width: 480px){
+      :root { --navbar-height: 64px; }
+      .hero h1 { font-size:1.6rem; }
+      .steps { grid-template-columns: 1fr; }
+    }
+
+  </style>
+</head>
+<body>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top">
+  <div class="container flex-column text-center">
+    <a class="navbar-brand fw-bold fs-3 mb-2" href="#top">Afriqiya <span class="brand-accent">Tours</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="/index.html">Accueil</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Destinations</a>
+         <ul class="dropdown-menu" aria-labelledby="destDropdown">
+            <li><a class="dropdown-item" href="/destinations/kenya.html">Kenya</a></li>
+            <li><a class="dropdown-item" href="/destinations/tanzanie.html">Tanzanie</a></li>
+            <li><a class="dropdown-item" href="/destinations/senegal.html">Sénégal</a></li>
+            <li><a class="dropdown-item" href="/destinations/maroc.html">Maroc</a></li>
+            <li><a class="dropdown-item" href="/destinations/afrique-du-sud.html">Afrique du Sud</a></li>
+            <li><a class="dropdown-item" href="/destinations/egypte.html">Égypte</a></li>
+            <li><a class="dropdown-item" href="/destinations/namibie.html">Namibie</a></li>
+            <li><a class="dropdown-item" href="/destinations/madagascar.html">Madagascar</a></li>
+            <li><a class="dropdown-item" href="/destinations/ghana.html">Ghana</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="/index.html#circuits">Circuits</a></li>
+        <li class="nav-item"><a class="nav-link" href="/index.html#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="/index.html#blog">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="/a-propos.html">À propos</a></li>
+        <li class="nav-item"><a class="nav-link" href="/connecter.html">Connecter</a></li>
+      </ul>
+      <a href="/contact.html" class="btn cta-reserve ms-lg-3">Réservez maintenant</a>
+    </div>
+  </div>
+</nav>
+
+  <!-- HERO -->
+  <header class="hero" role="banner" aria-hidden="false">
+    <div class="hero-inner">
+      <h1>Conseils pour bien préparer votre voyage en Afrique</h1>
+      <p class="lead">Guide pratique : préparation, santé, budget, sécurité et respect des cultures — pour des voyages responsables et mémorables.</p>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="container-narrow">
+
+      <!-- INTRO -->
+      <div class="intro">
+        <div class="card">
+          <span class="kicker">Blog & Inspirations</span>
+          <h2 class="section-title">Avant de partir — l’essentiel</h2>
+          <p class="lead">Que vous partiez pour un safari, un circuit culturel ou une plage paradisiaque, une bonne préparation transforme un voyage réussi en un voyage inoubliable. Ci-dessous tu trouveras un guide complet, clair et pratique pour préparer chaque étape.</p>
+
+          <div class="steps">
+            <div class="step">
+              <strong>Documents</strong>
+              Passeport valide (6 mois), visas, copies papiers et numériques.
+            </div>
+            <div class="step">
+              <strong>Santé & Vaccins</strong>
+              Vérifie les obligations médicales (fièvre jaune, vaccination) et prends une assurance santé.
+            </div>
+            <div class="step">
+              <strong>Saison & Climat</strong>
+              Choisis la bonne période selon destination (safaris : saison sèche).
+            </div>
+            <div class="step">
+              <strong>Respect local</strong>
+              Informe-toi sur codes vestimentaires et usages locaux.
+            </div>
+          </div>
+        </div>
+
+        <aside class="aside">
+          <div class="card">
+            <h3>En bref</h3>
+            <p class="muted">4 actions clés : (1) vérifier documents, (2) vaccins et assurance, (3) choisir la bonne saison, (4) respecter les communautés locales.</p>
+            <div style="height:10px"></div>
+            <a class="btn-cta" href="blog2.html">Lire Blog 2 →</a>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Preparation section -->
+      <section class="section-block" id="preparation">
+        <div class="panel reveal">
+          <h4>Préparation administrative & papier</h4>
+          <p>Avant de partir, contrôle les éléments suivants : </p>
+          <ul>
+            <li>Passeport valide au moins 6 mois après la date de retour.</li>
+            <li>Visas : certains pays exigent demande en ligne (e-visa), d'autres délivrent à l'arrivée. Vérifie les formalités officielles.</li>
+            <li>Photocopies et sauvegardes : garde une copie papier et une copie numérique (cloud + mail).</li>
+            <li>Assurance voyage : recommande une formule qui couvre rapatriement, annulation et frais de santé.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Santé & vaccins -->
+      <section class="section-block" id="sante">
+        <div class="panel reveal">
+          <h4>Santé, vaccins et pharmacie de voyage</h4>
+          <p>Consulte un centre de vaccination international 6 à 8 semaines avant le départ. Selon la destination, les recommandations varient :</p>
+          <div class="steps">
+            <div class="step">
+              <strong>Vaccins courants</strong>
+              Fièvre jaune (souvent exigé), hépatite A/B, typhoïde selon zones.
+            </div>
+            <div class="step">
+              <strong>Médicaments</strong>
+              Antipaludiques si nécessaires, anti-diarrhéiques, antiseptique, pansements, antalgiques.
+            </div>
+            <div class="step">
+              <strong>Protection</strong>
+              Crème solaire haute protection, chapeau, lunettes de soleil, répulsif moustiques.
+            </div>
+            <div class="step">
+              <strong>Assurance</strong>
+              Emporte les numéros d’urgence et la carte d’assurance sur mobile et papier.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bagages & équipement -->
+      <section class="section-block" id="bagages">
+        <div class="panel reveal">
+          <h4>Bagages & équipement essentiel</h4>
+          <p>Le bon équipement dépend du circuit (safari / plage / randonnée), mais certains éléments sont incontournables :</p>
+          <ul>
+            <li>Chaussures confortables et adaptées (randonnée légère + sandales).</li>
+            <li>Vêtements légers, couches pour soirées fraîches, tenues respectueuses pour visites culturelles.</li>
+            <li>Lampe frontale, batteries externes, adaptateur de voyage (type britannique ou européen selon pays).</li>
+            <li>Appareil photo + longue focale si possible pour safaris — ou smartphone avec bon zoom.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Sécurité & comportement -->
+      <section class="section-block" id="securite">
+        <div class="panel reveal">
+          <h4>Sécurité & conseils de comportement</h4>
+          <p>Voyager en sécurité, c’est être prudent sans renoncer à la découverte :</p>
+          <ul>
+            <li>Évite d’afficher objets de valeur en public ; laisse les bijoux précieux à la maison.</li>
+            <li>Utilise des coffres d’hôtel et garde les documents importants en lieu sûr.</li>
+            <li>Renseigne-toi sur les zones déconseillées et suis les conseils des guides locaux.</li>
+            <li>Pour les safaris, écoute et respecte les consignes des guides : sécurité et respect des animaux vont de pair.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Budget & paiement -->
+      <section class="section-block" id="budget">
+        <div class="panel reveal">
+          <h4>Budget, paiements et pourboires</h4>
+          <p>Quelques recommandations pratiques :</p>
+          <ul>
+            <li>Prévois une combinaison de liquidités (monnaie locale) et cartes bancaires. Certaines zones rurales n’acceptent pas les cartes.</li>
+            <li>Vérifie les frais bancaires internationaux et avertis ta banque du voyage pour éviter le blocage de la carte.</li>
+            <li>Pourboires : modestes et adaptés (guides, chauffeurs, porteurs). Informe-toi sur les usages locaux.</li>
+            <li>Garde un fond d’urgence pour imprévus (santé, transport).</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Respect & impact -->
+      <section class="section-block" id="respect">
+        <div class="panel reveal">
+          <h4>Respect des communautés et voyage responsable</h4>
+          <p>Le tourisme peut être positif s’il s’appuie sur le respect et la durabilité :</p>
+          <ol>
+            <li><strong>Soutenir local :</strong> privilégie artisans, hébergements et restaurants locaux.</li>
+            <li><strong>Écologie :</strong> limite plastique, participe si possible à projets de conservation locaux.</li>
+            <li><strong>Culture :</strong> demande la permission avant de photographier des personnes ; respecte les codes vestimentaires et religieux.</li>
+            <li><strong>Apprendre :</strong> un petit effort de langue locale (salutations) change beaucoup pour l’accueil et l’échange.</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Inspirations visuelles -->
+      <section class="section-block">
+        <h2 class="section-title">Inspiration & idées</h2>
+        <div class="grid-cards">
+          <div class="img-card">
+            <img src="/Les 9 destinations culturelles/blog1.2.3/5 REASONS WHY YOU SHOULD TRAVEL LIKE A LOCAL IN AFRICA.jpeg" alt="Rencontre locale">
+            <div class="meta">
+              <strong>Rencontres locales</strong>
+              <div class="muted">Moments d'échange dans les villages et marchés.</div>
+            </div>
+          </div>
+          <div class="img-card">
+            <img src="/Les 9 destinations culturelles/blog1.2.3/télécharger (6.1).jpeg" alt="Safari">
+            <div class="meta">
+              <strong>Photographie</strong>
+              <div class="muted">Astuce : l'heure dorée (sunrise / sunset) pour les meilleurs clichés.</div>
+            </div>
+          </div>
+          <div class="img-card">
+            <img src="/Les 9 destinations culturelles/blog1.2.3/Best Beaches in Africa.jpeg" alt="Plage">
+            <div class="meta">
+              <strong>Plages secrètes</strong>
+              <div class="muted">Relaxation après un circuit culturel intense.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA strip -->
+      <section class="section-block">
+        <div class="cta-strip">
+          <div class="text">Prêt·e à planifier ? Nous t'aidons à composer ton itinéraire responsable.</div>
+          <div>
+            <a href="contact.html" class="btn-cta">Contactez-nous</a>
+            <a href="blog2.html" class="btn-cta" style="background:var(--brand-olive); color:#fff;">Lire Blog 2 →</a>
+          </div>
+        </div>
+      </section>
+
+    </div> <!-- /container-narrow -->
+
+  </main>
+
+  <!-- back to top -->
+  <button id="toTop" aria-label="Remonter en haut">↑</button>
+
+  <!-- FOOTER -->
+<footer class="footer mt-5 bg-dark text-light py-5">
+  <div class="container text-center">
+    <p>&copy; 2025 Afriqiya Tours. Tous droits réservés.</p>
+    <p>Afriqiya Tours est votre partenaire pour des voyages sur mesure à travers l'Afrique et le monde. Notre mission est de vous offrir des expériences uniques, confortables et mémorables, en vous accompagnant à chaque étape de votre aventure.</p>
+    <div class="contact-info mb-3">
+      <p><strong>Téléphone :</strong> +221 77 432 47 63 / +221 77 567 09 78</p>
+      <p><strong>Email :</strong> <a href="mailto:contact@afriqiyatours.com" class="text-light">contact@afriqiyatours.com</a></p>
+      <p><strong>Adresse :</strong> Avenue LAMINE GUEYE, Dakar</p>
+    </div>
+
+    <div class="social-links mb-3">
+      <a href="#" class="text-light mx-2" aria-label="facebook"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="text-light mx-2" aria-label="instagram"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="text-light mx-2" aria-label="twitter"><i class="bi bi-twitter"></i></a>
+      <a href="#" class="text-light mx-2" aria-label="youtube"><i class="bi bi-youtube"></i></a>
+    </div>
+
+    <small>Développé par <strong>LuminaDev</strong></small>
+  </div>
+</footer>
+
+  <!-- Bootstrap JS (for navbar collapse) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    /* ===== Scroll reveal for panels (IntersectionObserver) ===== */
+    (function(){
+      const observer = new IntersectionObserver((entries)=> {
+        entries.forEach(entry => {
+          if(entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    })();
+
+    /* ===== Navbar shadow on scroll ===== */
+    (function(){
+      const nav = document.querySelector('.navbar');
+      function onScroll(){ if(window.scrollY > 20) nav.classList.add('scrolled'); else nav.classList.remove('scrolled'); }
+      window.addEventListener('scroll', onScroll);
+      onScroll();
+    })();
+
+    /* ===== Back to top button ===== */
+    (function(){
+      const btn = document.getElementById('toTop');
+      window.addEventListener('scroll', () => {
+        btn.style.display = window.scrollY > 500 ? 'block' : 'none';
+      });
+      btn.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+    })();
+
+    /* ===== Small accessibility: allow deep links to sections via hash without being hidden under navbar ===== */
+    (function(){
+      // When linking to an anchor (e.g., #bagages), offset scroll to account for navbar
+      function offsetAnchor(){
+        if(location.hash.length > 1){
+          window.scrollTo(window.scrollX, window.scrollY - (parseInt(getComputedStyle(document.documentElement).getPropertyValue('--navbar-height')) || 72) - 10);
+        }
+      }
+      window.addEventListener("hashchange", offsetAnchor);
+      window.addEventListener("load", () => {
+        setTimeout(offsetAnchor, 50);
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Safari Aventure | Afriqiya Tours</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --brand-dark: #0D1B2A;
+      --brand-warm: #C89F5F;
+      --brand-olive: #2F5D45;
+      --muted: #6b6b6b;
+      --bg: #f7f6f2;
+    }
+    body { font-family: 'Poppins', sans-serif; color: var(--brand-dark); background: var(--bg); margin:0; }
+    a { text-decoration:none; }
+    img { max-width:100%; display:block; }
+
+    /* Navbar */
+    .navbar { align-items:center; background: rgba(255,255,255,0.98); padding:.6rem 0; box-shadow:0 0 0 transparent; transition:.25s; z-index:1100; }
+    .navbar .navbar-brand { color: var(--brand-dark); }
+    .brand-accent { color: var(--brand-warm); }
+    .nav-link { color: var(--brand-dark); margin:0 .35rem; }
+    .nav-link:hover { color: var(--brand-olive); }
+    .btn-cta { background: linear-gradient(90deg,var(--brand-olive),var(--brand-warm)); border:none; color:#fff; font-weight:600; }
+    .cta-reserve { background: var(--brand-warm); color: var(--brand-dark); font-weight:700; padding:.55rem .9rem; border-radius:.45rem; }
+
+    /* Hero */
+    .hero { min-height:500px; position:relative; display:flex; align-items:center; justify-content:center; color:#fff; text-shadow:0 4px 18px rgba(0,0,0,.45); padding-top:5.2rem; padding-bottom:5.2rem; overflow:hidden; background: url('images/safari-hero.jpeg') center/cover no-repeat; }
+    .hero::after { content:""; position:absolute; inset:0; background: linear-gradient(180deg, rgba(13,27,42,0.3), rgba(13,27,42,0.6)); z-index:1; }
+    .hero-content { position:relative; z-index:2; text-align:center; max-width:980px; padding:0 18px; }
+    .hero h1 { font-weight:700; margin-bottom:.5rem; font-size:2.5rem; }
+    .hero p { color:#f1f1f1; max-width:880px; margin:0 auto 1.25rem; }
+
+    /* Section titles */
+    .section-title { color: var(--brand-dark); font-weight:700; margin-bottom:.5rem; font-size:1.8rem; }
+    .muted { color: var(--muted); }
+
+    /* Card grid */
+    .card-grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap:1.5rem; margin-top:2rem; }
+    .card-slider { border-radius:12px; overflow:hidden; background:#fff; display:flex; flex-direction:column; box-shadow:0 6px 18px rgba(0,0,0,.08); transition:.25s; cursor:pointer; }
+    .card-slider:hover { transform:translateY(-6px); box-shadow:0 12px 30px rgba(0,0,0,.12); }
+    .card-slider img { width:100%; height:220px; object-fit:cover; }
+    .card-body-slider { padding:18px; display:flex; flex-direction:column; flex:1; gap:.5rem; }
+    .card-title-slider { font-weight:700; color:var(--brand-dark); margin-bottom:.3rem; }
+    .card-text-slider { color:var(--muted); flex:1; }
+
+    .card-slider.large { grid-column: span 1; }
+    @media(min-width:992px){
+      .card-slider.large:nth-child(1),
+      .card-slider.large:nth-child(2){ grid-column: span 2; }
+      .card-slider.large:nth-child(3),
+      .card-slider.large:nth-child(4){ grid-column: span 2; }
+    }
+
+    /* Footer */
+    footer { background: var(--brand-dark); color: var(--brand-warm); padding:40px 0; text-align:center; }
+    footer a { color: var(--brand-warm); }
+
+  </style>
+</head>
+<body id="top">
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top">
+  <div class="container flex-column text-center">
+    <a class="navbar-brand fw-bold fs-3 mb-2" href="#top">Afriqiya <span class="brand-accent">Tours</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="/index.html">Accueil</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Destinations</a>
+         <ul class="dropdown-menu" aria-labelledby="destDropdown">
+            <li><a class="dropdown-item" href="/destinations/kenya.html">Kenya</a></li>
+            <li><a class="dropdown-item" href="/destinations/tanzanie.html">Tanzanie</a></li>
+            <li><a class="dropdown-item" href="/destinations/senegal.html">Sénégal</a></li>
+            <li><a class="dropdown-item" href="/destinations/maroc.html">Maroc</a></li>
+            <li><a class="dropdown-item" href="/destinations/afrique-du-sud.html">Afrique du Sud</a></li>
+            <li><a class="dropdown-item" href="/destinations/egypte.html">Égypte</a></li>
+            <li><a class="dropdown-item" href="/destinations/namibie.html">Namibie</a></li>
+            <li><a class="dropdown-item" href="/destinations/madagascar.html">Madagascar</a></li>
+            <li><a class="dropdown-item" href="/destinations/ghana.html">Ghana</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="/index.html#circuits">Circuits</a></li>
+        <li class="nav-item"><a class="nav-link" href="/index.html#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="/index.html#blog">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="/a-propos.html">À propos</a></li>
+        <li class="nav-item"><a class="nav-link" href="/connecter.html">Connecter</a></li>
+      </ul>
+      <a href="/index.html" class="btn cta-reserve ms-lg-3">Réservez maintenant</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="accueil" class="hero d-flex align-items-center justify-content-center">
+  <div class="hero-content text-center">
+    <h1 class="display-4 fw-bold mb-3">Safari Aventure</h1>
+    <p class="lead mx-auto mb-4">Rencontrez la faune sauvage africaine dans des safaris encadrés par des guides locaux.</p>
+  </div>
+</header>
+
+<main class="pt-5 container">
+
+  <!-- GRID SAFARIS -->
+  <section id="safaris" class="py-5">
+    <h2 class="section-title text-center mb-4">Nos safaris emblématiques</h2>
+    <div class="card-grid">
+
+      <!-- Serengeti -->
+      <div class="card-slider large" data-bs-toggle="modal" data-bs-target="#modalSerengeti">
+        <img src="/destination.images/Serengeti National Park, Tanzania.jpeg" alt="Serengeti">
+        <div class="card-body-slider">
+          <h5 class="card-title-slider">Serengeti</h5>
+          <p class="card-text-slider">Migration des gnous et paysages infinis.</p>
+        </div>
+      </div>
+
+      <!-- Masai Mara -->
+      <div class="card-slider large" data-bs-toggle="modal" data-bs-target="#modalMasaiMara">
+        <img src="/destination.images/Golden Hour Safari_ Lions Awaken in Masai Mara.jpeg" alt="Masai Mara">
+        <div class="card-body-slider">
+          <h5 class="card-title-slider">Masai Mara</h5>
+          <p class="card-text-slider">Parc mythique pour observer les Big Five.</p>
+        </div>
+      </div>
+
+      <!-- Etosha -->
+      <div class="card-slider large" data-bs-toggle="modal" data-bs-target="#modalEtosha">
+        <img src="/destination.images/Le parc national d’Etosha et sa biodiversité d’une étonnante richesse.jpeg" alt="Etosha">
+        <div class="card-body-slider">
+          <h5 class="card-title-slider">Etosha</h5>
+          <p class="card-text-slider">Rencontrez éléphants, lions et girafes en Namibie.</p>
+        </div>
+      </div>
+
+      <!-- Kruger -->
+      <div class="card-slider large" data-bs-toggle="modal" data-bs-target="#modalKruger">
+        <img src="/destination.images/Kruger National park.jpeg" alt="Kruger">
+        <div class="card-body-slider">
+          <h5 class="card-title-slider">Kruger</h5>
+          <p class="card-text-slider">Safaris exceptionnels au cœur de la nature sud-africaine.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION CIRCUIT CULTUREL -->
+  <section class="py-5 text-center">
+    <h2 class="section-title mb-3">Envie de découvrir la culture africaine ?</h2>
+    <p class="mb-4">Après vos safaris, explorez l’histoire, les traditions et la gastronomie des régions visitées.</p>
+    <a href="/circuits/circuit-culturel.html" class="btn btn-cta btn-lg">Découvrir le circuit culturel</a>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2025 Afriqiya Tours. Tous droits réservés.</p>
+  <p><a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a></p>
+</footer>
+
+<!-- Modals -->
+<div class="modal fade" id="modalSerengeti" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Serengeti</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Le Serengeti, au nord de la Tanzanie, est célèbre pour sa migration annuelle de gnous et sa biodiversité exceptionnelle. Vous vivrez des safaris incroyables, au cœur de paysages infinis et de rencontres avec la faune sauvage africaine.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalMasaiMara" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Masai Mara</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Le parc du Masai Mara au Kenya est l’un des plus célèbres d’Afrique pour observer les Big Five. Vous découvrirez la culture locale Masai et participerez à des safaris accompagnés de guides expérimentés.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalEtosha" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Etosha</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Le parc national d’Etosha en Namibie offre une immersion unique dans la vie sauvage africaine. Lions, éléphants, girafes et autres animaux évoluent dans un cadre naturel spectaculaire, idéal pour des safaris mémorables.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalKruger" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Kruger</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Le parc Kruger en Afrique du Sud est un incontournable pour vivre des safaris exceptionnels. Ses paysages variés et sa faune riche permettent des expériences uniques et inoubliables, encadrées par des guides experts.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
