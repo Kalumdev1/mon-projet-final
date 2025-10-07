@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Blog 3 – Voyager responsable (durable) | Afriqiya Tours</title>
+  <title>Blog 2 – Culture & Traditions africaines | Afriqiya Tours</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -30,31 +30,62 @@
     }
     a { text-decoration:none; color:inherit; }
 
-    .navbar { align-items:center; background: rgba(255,255,255,0.98); transition: all 0.25s ease; padding: .6rem 0; z-index:1100; position: fixed; top:0; width:100%; }
+    /* Navbar */
+    .navbar {
+      align-items: center;
+      background: rgba(255,255,255,0.98);
+      transition: all 0.25s ease;
+      padding: .6rem 0;
+      z-index: 1100;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
     .navbar.scrolled { box-shadow: 0 8px 24px rgba(13,27,42,0.08); }
     .navbar .navbar-brand { color: var(--brand-dark); font-weight:700; }
     .brand-accent { color: var(--brand-warm); }
     .nav-link { color: var(--brand-dark); margin: 0 .35rem; font-weight:600; }
     .nav-link:hover { color: var(--brand-olive); }
+    .cta-reserve { background: var(--brand-warm); color: var(--brand-dark); font-weight:700; padding: .5rem .85rem; border-radius: .45rem; }
 
-    .hero { height: 72vh; min-height:380px; display:flex; align-items:center; justify-content:center; padding-top:var(--navbar-height); color:#fff; text-align:center; background-image:url('/Big\ Five\ Safari_\ Ultimate\ Wildlife\ Experience\ in\ Kenya\'s\ National\ Parks.jpeg'); background-size:cover; background-position:center center; background-attachment: fixed; box-shadow: inset 0 0 0 2000px rgba(13,27,42,0.26); }
+    /* Hero */
+    .hero {
+      height: 72vh;
+      min-height:380px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      position:relative;
+      color:#fff;
+      text-align:center;
+      padding-top:var(--navbar-height);
+      background-image: url('images/Abissa\ festival\ akan\ ivory\ coast\ 🇨🇮.jpeg');
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
+      box-shadow: inset 0 0 0 2000px rgba(13,27,42,0.28);
+    }
     .hero-inner { max-width: var(--container-width); padding: 0 20px; }
-    .hero h1 { font-size: clamp(1.8rem,3.2vw,2.8rem); font-weight:700; margin:0 0 .6rem; }
+    .hero h1 { font-size: clamp(1.8rem, 3.2vw, 2.8rem); margin:0 0 .6rem; font-weight:700; }
     .hero p { color:#f1f1f1; max-width:820px; margin:0 auto; }
 
     main { padding-top: calc(var(--navbar-height) + 18px); }
+
     .container-narrow { max-width: var(--container-width); margin: 0 auto; padding: 56px 20px; }
 
     .kicker { display:inline-block; background:#fff; padding:8px 12px; border-radius:999px; font-weight:700; color:var(--brand-olive); box-shadow:0 6px 18px rgba(47,93,69,0.06); margin-bottom: 18px; }
 
+    h2.section-title { color:var(--brand-dark); font-weight:700; margin: 4px 0 22px; font-size:1.6rem; text-align:left; }
+    .lead { color:var(--muted); margin-bottom: 28px; }
+
     .panel { background:#fff; padding:22px; border-radius:12px; box-shadow:0 8px 22px rgba(13,27,42,0.05); opacity:0; transform:translateY(12px); transition: all 520ms cubic-bezier(.2,.9,.2,1); margin-bottom:20px; }
     .panel.visible { opacity:1; transform:translateY(0); }
 
-    .steps { display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin-top:12px; }
+    .grid-cards { display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-top:12px; }
 
-    .img-card { border-radius:12px; overflow:hidden; background:#fff; box-shadow:0 8px 22px rgba(13,27,42,0.05); }
-    .img-card img{ width:100%; height:160px; object-fit:cover; display:block; }
-    .img-card .meta{ padding:12px; }
+    .img-card { border-radius:12px; overflow:hidden; background:#fff; box-shadow: 0 8px 22px rgba(13,27,42,0.05); }
+    .img-card img { width:100%; height:160px; object-fit:cover; display:block; }
+    .img-card .meta { padding:12px; }
 
     .cta-strip { margin: 30px 0; background: linear-gradient(90deg, rgba(200,159,95,0.08), rgba(47,93,69,0.04)); padding: 18px; border-radius:12px; display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
     .btn-cta { background: var(--brand-warm); color: var(--brand-dark); padding:10px 16px; border-radius:10px; font-weight:700; border:none; cursor:pointer; }
@@ -63,13 +94,13 @@
 
     footer { background:var(--brand-dark); color:var(--brand-warm); padding:36px 20px; text-align:center; margin-top:40px; }
 
-    @media(max-width:980px){ .hero{ background-attachment: scroll; height:60vh; } .container-narrow{ padding:36px 16px; } }
+    @media(max-width:980px){ .hero { background-attachment: scroll; height:60vh; } .container-narrow{ padding:36px 16px; } }
     @media(max-width:480px){ :root{ --navbar-height:64px } .hero h1{ font-size:1.6rem } }
   </style>
 </head>
 <body>
 
- <!-- NAVBAR -->
+  <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top">
   <div class="container flex-column text-center">
     <a class="navbar-brand fw-bold fs-3 mb-2" href="index.html">Afriqiya <span class="brand-accent">Tours</span></a>
@@ -82,15 +113,15 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Destinations</a>
          <ul class="dropdown-menu" aria-labelledby="destDropdown">
-            <li><a class="dropdown-item" href="destinations/kenya.html">Kenya</a></li>
-            <li><a class="dropdown-item" href="destinations/tanzanie.html">Tanzanie</a></li>
-            <li><a class="dropdown-item" href="destinations/senegal.html">Sénégal</a></li>
-            <li><a class="dropdown-item" href="destinations/maroc.html">Maroc</a></li>
-            <li><a class="dropdown-item" href="destinations/afrique-du-sud.html">Afrique du Sud</a></li>
-            <li><a class="dropdown-item" href="destinations/egypte.html">Égypte</a></li>
-            <li><a class="dropdown-item" href="destinations/namibie.html">Namibie</a></li>
-            <li><a class="dropdown-item" href="destinations/madagascar.html">Madagascar</a></li>
-            <li><a class="dropdown-item" href="destinations/ghana.html">Ghana</a></li>
+            <li><a class="dropdown-item" href="kenya.html">Kenya</a></li>
+            <li><a class="dropdown-item" href="tanzanie.html">Tanzanie</a></li>
+            <li><a class="dropdown-item" href="senegal.html">Sénégal</a></li>
+            <li><a class="dropdown-item" href="maroc.html">Maroc</a></li>
+            <li><a class="dropdown-item" href="afrique-du-sud.html">Afrique du Sud</a></li>
+            <li><a class="dropdown-item" href="egypte.html">Égypte</a></li>
+            <li><a class="dropdown-item" href="namibie.html">Namibie</a></li>
+            <li><a class="dropdown-item" href="madagascar.html">Madagascar</a></li>
+            <li><a class="dropdown-item" href="ghana.html">Ghana</a></li>
           </ul>
         </li>
         <li class="nav-item"><a class="nav-link" href="index.html#circuits">Circuits</a></li>
@@ -107,8 +138,8 @@
   <!-- HERO -->
   <header class="hero">
     <div class="hero-inner">
-      <h1>Voyager responsable — tourisme durable</h1>
-      <p class="lead">Des pratiques simples pour réduire ton impact et soutenir les communautés locales lors de tes voyages.</p>
+      <h1>Culture & traditions africaines</h1>
+      <p class="lead">Plongez au cœur des musiques, danses, artisanats et fêtes qui font la richesse du continent.</p>
     </div>
   </header>
 
@@ -117,57 +148,71 @@
 
       <div>
         <span class="kicker">Blog & Inspirations</span>
-        <h2 class="section-title">Pour un voyage qui a du sens</h2>
-        <p class="lead">Le tourisme durable, c’est l’affaire de tous. Voici des conseils pratiques et faciles à mettre en œuvre pour voyager plus responsable.</p>
+        <h2 class="section-title">Comprendre & vivre la culture</h2>
+        <p class="lead">L'Afrique est un patchwork culturel. Voici des clés pour mieux apprécier chaque rencontre et participer avec respect.</p>
       </div>
 
-      <!-- 4 conseils principaux (développés) -->
+      <!-- Music & Dance -->
       <section class="panel reveal">
-        <h3>1 — Choisir des hébergements & prestataires responsables</h3>
-        <p>Privilégie les structures qui emploient localement, gèrent leurs ressources et soutiennent des projets communautaires. Les labels ne sont pas tout — lis les retours, demande comment ils soutiennent la communauté.</p>
-      </section>
-
-      <section class="panel reveal">
-        <h3>2 — Réduire les déchets & l’empreinte carbone</h3>
-        <p>Emporte une gourde, refuse le plastique à usage unique, privilégie les transports locaux (train, bus) ou compense ton empreinte carbone si possible. Les gestes simples font une vraie différence cumulée.</p>
-      </section>
-
-      <section class="panel reveal">
-        <h3>3 — Acheter local & respecter le patrimoine</h3>
-        <p>Soutiens l’économie locale : artisans, marchés, petites échoppes. Demande la provenance des produits, évite l’achat d’objets qui menacent la faune (ivoire, corail), et respecte les sites sacrés.</p>
-      </section>
-
-      <section class="panel reveal">
-        <h3>4 — S’informer & échanger avec respect</h3>
-        <p>Avant de partir, renseigne-toi sur les coutumes. Pendant le voyage, tends une oreille, pose des questions et écoute : l’échange culturel est le cœur d’un tourisme durable.</p>
-      </section>
-
-      <!-- Good practices grid -->
-      <section class="panel reveal">
-        <h3>Bonnes pratiques au quotidien</h3>
+        <h3>Musique & danse — le cœur des fêtes</h3>
+        <p>La musique est omniprésente : percussions, chants polyphoniques, mélodies de instruments traditionnels. Assister à une danse locale, c’est comprendre un pan de l’identité communautaire.</p>
         <div class="grid-cards">
-          <div class="img-card"><img src="blog1.2.3/7 Plastic Recycling Facts You Should Know.jpeg" alt=""><div class="meta"><strong>Gourde réutilisable</strong><div class="muted">Évite les bouteilles plastiques.</div></div></div>
-          <div class="img-card"><img src="blog1.2.3/télécharger (7.1).jpeg" alt=""><div class="meta"><strong>Acheter local</strong><div class="muted">Favorise l'économie du lieu.</div></div></div>
-          <div class="img-card"><img src="blog1.2.3/World Wildlife Conservation Day.jpeg" alt=""><div class="meta"><strong>Respect des animaux</strong><div class="muted">Ne pas nourrir ou approcher à tout prix.</div></div></div>
+          <div class="img-card"><img src="blog1.2.3/Danseuse de São Tomé.jpeg" alt="Musique"><div class="meta"><strong>Tambours & rythmes</strong><div class="muted">Rythmes qui accompagnent cérémonies et fêtes.</div></div></div>
+          <div class="img-card"><img src="blog1.2.3/Pourquoi J'aime Le Sénégal - Bons Plans, Séjours & Voyages.jpeg" alt="Danse"><div class="meta"><strong>Danses rituelles</strong><div class="muted">Expressions culturelles ancrées dans l'histoire.</div></div></div>
+          <div class="img-card"><img src="blog1.2.3/Maralal International Camel Derby Festival Samburu County By Antony Trivet Lifestyles Luxury Travel (1).jpeg" alt="Festival"><div class="meta"><strong>Festivals</strong><div class="muted">Moments d’échange et de partage.</div></div></div>
         </div>
       </section>
 
-      <!-- Resources & links -->
+      <!-- Artisanat -->
       <section class="panel reveal">
-        <h3>Ressources utiles</h3>
+        <h3>Artisanat & savoir-faire</h3>
+        <p>Marchés, ateliers et artisans : supports d’économie locale et mémoire vivante. Achète localement et demande l’histoire de l’objet — cela enrichira ton expérience.</p>
         <ul>
-          <li>Contacte-nous pour un itinéraire “responsable” adapté à ton budget.</li>
-          <li>Consulte les recommandations locales (parcs, ONG locales, offices de tourisme).</li>
-          <li>Si tu veux compenser ton empreinte carbone, on peut t’aider à choisir un programme sérieux.</li>
+          <li>Textiles tissés à la main, perles, poterie, sculptures.</li>
+          <li>Conseil : négocie avec respect et demande l’origine du produit.</li>
         </ul>
       </section>
 
+      <!-- Gastronomy -->
+      <section class="panel reveal">
+        <h3>Gastronomie — goûter pour comprendre</h3>
+        <p>La cuisine locale raconte l’histoire : épices, produits de la mer, céréales et sauces. Essaye les plats de rue réputés — souvent une immense partie de la vie quotidienne.</p>
+      </section>
+
+      <!-- Ethnies & langues -->
+      <section class="panel reveal">
+        <h3>Ethnies, langues & petites histoires</h3>
+        <p>Apprends quelques mots (salutations), renseigne-toi sur les codes locaux et respecte les pratiques religieuses et vestimentaires : cela ouvre des portes et des sourires.</p>
+      </section>
+
+      <!-- Festivals: examples -->
+      <section class="panel reveal">
+        <h3>Festivals à ne pas manquer (exemples)</h3>
+        <p>Quelques rendez-vous culturels forts :</p>
+        <ul>
+          <li><strong>Magal de Touba (Sénégal)</strong> — pèlerinage religieux et rassemblement culturel.</li>
+          <li><strong>Festival de Zanzibar (Tanzania)</strong> — musique et arts swahilis.</li>
+          <li><strong>Timkat (Ethiopie)</strong> — célébration orthodoxe spectaculaire.</li>
+          <li><strong>Cape Town Carnival (Afrique du Sud)</strong> — mélange de cultures et de couleurs.</li>
+        </ul>
+      </section>
+
+      <!-- Inspiration visuals -->
+      <section class="panel reveal">
+        <h3>Rencontres & immersion</h3>
+        <p>Privilégie les homestays et les visites chez l’habitant quand c’est possible : l’échange direct est la meilleure école. Toujours demander la permission avant de photographier.</p>
+        <div class="grid-cards">
+          <div class="img-card"><img src="blog1.2.3/télécharger (8.1).jpeg" alt="Rencontre locale"><div class="meta"><strong>Accueil</strong><div class="muted">Partages autour d’un thé ou d’un repas.</div></div></div>
+          <div class="img-card"><img src="blog1.2.3/Senegal.jpeg" alt="Artisan"><div class="meta"><strong>Atelier</strong><div class="muted">Rencontrez l'artisan et découvrez son savoir-faire.</div></div></div>
+        </div>
+      </section>
+      <!-- CTA strip -->
       <section class="panel reveal">
         <div class="cta-strip">
-          <div class="text">Envie d’un circuit durable et sur-mesure ?</div>
+          <div class="text">Tu veux vivre ces expériences ? On construit ton circuit culturel sur-mesure.</div>
           <div style="display:flex; gap:8px;">
             <a class="btn-cta" href="contact.html">Contactez-nous</a>
-            <a class="btn-cta" href="index.html" style="background:var(--brand-olive); color:#fff;">Retour à l'accueil</a>
+            <a class="btn-cta" href="blog3.html" style="background:var(--brand-olive); color:#fff;">Lire Blog 3 →</a>
           </div>
         </div>
       </section>

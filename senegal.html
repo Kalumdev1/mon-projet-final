@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Madagascar – Nature & Aventure | Afriqiya Tours</title>
+  <title>Sénégal – Découverte | Afriqiya Tours</title>
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -33,11 +33,14 @@
 
     /* Hero */
     .hero { min-height:600px; position:relative; display:flex; align-items:center; justify-content:center; color:#fff; text-shadow:0 4px 18px rgba(0,0,0,.45); padding-top:5.2rem; padding-bottom:5.2rem; overflow:hidden; }
-    .hero iframe { position: absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:0; pointer-events:none; }
     .hero::after { content:""; position:absolute; inset:0; background: linear-gradient(180deg, rgba(13,27,42,0.30), rgba(13,27,42,0.55)); z-index:1; }
     .hero-content { position:relative; z-index:2; text-align:center; max-width:980px; padding:0 18px; }
     .hero h1 { font-weight:700; margin-bottom:.5rem; font-size:2.5rem; }
     .hero p { color:#f1f1f1; max-width:880px; margin:0 auto 1.25rem; }
+
+    /* Video YouTube */
+    .video-container { position:absolute; top:0; left:0; width:100%; height:100%; overflow:hidden; z-index:0; }
+    .video-container iframe { width:100%; height:100%; object-fit:cover; }
 
     /* Section titles */
     .section-title { color: var(--brand-dark); font-weight:700; margin-bottom:.5rem; font-size:1.8rem; }
@@ -79,43 +82,46 @@
     </button>
     <div class="collapse navbar-collapse justify-content-center" id="mainNav">
       <ul class="navbar-nav mb-2 mb-lg-0">
-        
+       
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Destinations</a>
          <ul class="dropdown-menu" aria-labelledby="destDropdown">
-            <li><a class="dropdown-item" href="/destinations/kenya.html">Kenya</a></li>
-            <li><a class="dropdown-item" href="/destinations/tanzanie.html">Tanzanie</a></li>
-            <li><a class="dropdown-item" href="/destinations/senegal.html">Sénégal</a></li>
-            <li><a class="dropdown-item" href="/destinations/maroc.html">Maroc</a></li>
-            <li><a class="dropdown-item" href="/destinations/afrique-du-sud.html">Afrique du Sud</a></li>
-            <li><a class="dropdown-item" href="/destinations/egypte.html">Égypte</a></li>
-            <li><a class="dropdown-item" href="/destinations/namibie.html">Namibie</a></li>
-            <li><a class="dropdown-item" href="/destinations/madagascar.html">Madagascar</a></li>
-            <li><a class="dropdown-item" href="/destinations/ghana.html">Ghana</a></li>
+            <li><a class="dropdown-item" href="kenya.html">Kenya</a></li>
+            <li><a class="dropdown-item" href="tanzanie.html">Tanzanie</a></li>
+            <li><a class="dropdown-item" href="senegal.html">Sénégal</a></li>
+            <li><a class="dropdown-item" href="maroc.html">Maroc</a></li>
+            <li><a class="dropdown-item" href="afrique-du-sud.html">Afrique du Sud</a></li>
+            <li><a class="dropdown-item" href="egypte.html">Égypte</a></li>
+            <li><a class="dropdown-item" href="namibie.html">Namibie</a></li>
+            <li><a class="dropdown-item" href="madagascar.html">Madagascar</a></li>
+            <li><a class="dropdown-item" href="ghana.html">Ghana</a></li>
           </ul>
         </li>
-        <li class="nav-item"><a class="nav-link" href="/index.html#circuits">Circuits</a></li>
-        <li class="nav-item"><a class="nav-link" href="/index.html#services">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="/index.html#blog">Blog</a></li>
-        <li class="nav-item"><a class="nav-link" href="/a-propos.html">À propos</a></li>
-        <li class="nav-item"><a class="nav-link" href="/connecter.html">Connecter</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#circuits">Circuits</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#blog">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="a-propos.html">À propos</a></li>
+        <li class="nav-item"><a class="nav-link" href="connecter.html">Connecter</a></li>
       </ul>
-      <a href="/contact.html" class="btn cta-reserve ms-lg-3">Réservez maintenant</a>
+      <a href="contact.html" class="btn cta-reserve ms-lg-3">Réservez maintenant</a>
     </div>
   </div>
 </nav>
 
 <!-- HERO -->
 <header id="accueil" class="hero d-flex align-items-center justify-content-center">
-  <iframe 
-    src="https://www.youtube.com/embed/6jP4ZUWSoJs?autoplay=1&mute=1&loop=1&playlist=6jP4ZUWSoJs" 
-    title="YouTube video player" frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen>
-  </iframe>
+  <div class="video-container">
+    <iframe 
+      src="https://www.youtube.com/embed/VstLXH6O9RA?autoplay=1&mute=1&loop=1&playlist=VstLXH6O9RA" 
+      title="YouTube video player" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      allowfullscreen>
+    </iframe>
+  </div>
   <div class="hero-content text-center">
-    <h1 class="display-4 fw-bold mb-3">Madagascar – Nature & Aventure</h1>
-    <p class="lead mx-auto mb-4">Immersion dans la biodiversité unique, plages paradisiaques et aventures culturelles inoubliables.</p>
+    <h1 class="display-4 fw-bold mb-3">Sénégal – Découverte</h1>
+    <p class="lead mx-auto mb-4">Plages magnifiques, culture vibrante et immersion authentique au cœur de l'Afrique de l'Ouest.</p>
     <a href="#destinations" class="btn btn-cta btn-lg px-4">Découvrir les options</a>
   </div>
 </header>
@@ -124,54 +130,54 @@
 
   <!-- GRID DES OPTIONS -->
   <section id="destinations" class="py-5">
-    <h2 class="section-title text-center mb-4">Nos options à Madagascar</h2>
+    <h2 class="section-title text-center mb-4">Nos options au Sénégal</h2>
     <div class="card-grid">
 
       <!-- Card 1 -->
       <div class="card-slider">
-        <img src="/destination.images/The capital_ Antananarivo.jpeg" alt="Antananarivo">
+        <img src="/destination.images/African Renaissance Monument                📍Dakar, Senegal.jpeg" alt="Tour Dakar">
         <div class="card-body-slider">
-          <h5 class="card-title-slider">Visite d'Antananarivo</h5>
-          <p class="card-text-slider">Découverte de la capitale, marchés locaux et monuments historiques.</p>
+          <h5 class="card-title-slider">Tour de Dakar</h5>
+          <p class="card-text-slider">Découverte de la capitale avec guide francophone et visite des principaux sites culturels.</p>
           <div class="price-slider">
-            <span class="price-item active">500 € / 8 jours / voyageur</span>
-            <span class="price-item">550 € / 10 jours / voyageur</span>
-            <span class="price-item">600 € / 12 jours / voyageur</span>
-            <span class="price-item">450 € / 4 jours / voyageur</span>
+            <span class="price-item active">500 € / 4 jours / voyageur</span>
+            <span class="price-item">550 € / 6 jours / voyageur</span>
+            <span class="price-item">600 € / 8 jours / voyageur</span>
+            <span class="price-item">450 € / 3 jours / voyageur</span>
           </div>
-          <a href="/contact.html" class="mt-auto btn btn-outline-primary">Réserver</a>
+          <a href="contact.html" class="mt-auto btn btn-outline-primary">Réserver</a>
         </div>
       </div>
 
       <!-- Card 2 -->
       <div class="card-slider">
-        <img src="/destination.images/Cycle Madagascar - Highlands to the Coast.jpeg" alt="Andevo">
+        <img src="/destination.images/Gorée _ La place de l'Europe devient la place de la liberté et de la dignité humaine.jpeg" alt="Ile de Gorée">
         <div class="card-body-slider">
-          <h5 class="card-title-slider">Aventure à Andevo</h5>
-          <p class="card-text-slider">Randonnées et immersion dans la culture locale au cœur des villages.</p>
+          <h5 class="card-title-slider">Ile de Gorée</h5>
+          <p class="card-text-slider">Excursion historique sur l'île, site classé au patrimoine mondial de l'UNESCO.</p>
           <div class="price-slider">
-            <span class="price-item active">650 € / 8 jours / voyageur</span>
-            <span class="price-item">700 € / 10 jours / voyageur</span>
-            <span class="price-item">750 € / 12 jours / voyageur</span>
-            <span class="price-item">600 € / 4 jours / voyageur</span>
+            <span class="price-item active">150 € / 4 jours / voyageur</span>
+            <span class="price-item">180 € / 6 jours / voyageur</span>
+            <span class="price-item">200 € / 8 jours / voyageur</span>
+            <span class="price-item">120 € / 2 jours / voyageur</span>
           </div>
-          <a href="/contact.html" class="mt-auto btn btn-outline-primary">Réserver</a>
+          <a href="contact.html" class="mt-auto btn btn-outline-primary">Réserver</a>
         </div>
       </div>
 
       <!-- Card 3 -->
       <div class="card-slider">
-        <img src="/destination.images/avventura a Nosy Be.jpeg" alt="Nosy Be">
+        <img src="/destination.images/Sine Saloum.jpeg" alt="Saloum">
         <div class="card-body-slider">
-          <h5 class="card-title-slider">Plages de Nosy Be</h5>
-          <p class="card-text-slider">Relaxation sur les plages paradisiaques et excursions marines uniques.</p>
+          <h5 class="card-title-slider">Delta du Saloum</h5>
+          <p class="card-text-slider">Balades en pirogue et découverte de la faune et flore uniques du delta du Saloum.</p>
           <div class="price-slider">
-            <span class="price-item active">800 € / 8 jours / voyageur</span>
-            <span class="price-item">850 € / 10 jours / voyageur</span>
-            <span class="price-item">900 € / 12 jours / voyageur</span>
-            <span class="price-item">750 € / 6 jours / voyageur</span>
+            <span class="price-item active">700 € / 8 jours / voyageur</span>
+            <span class="price-item">750 € / 10 jours / voyageur</span>
+            <span class="price-item">800 € / 12 jours / voyageur</span>
+            <span class="price-item">650 € / 5 jours / voyageur</span>
           </div>
-          <a href="/contact.html" class="mt-auto btn btn-outline-primary">Réserver</a>
+          <a href="contact.html" class="mt-auto btn btn-outline-primary">Réserver</a>
         </div>
       </div>
 
@@ -184,19 +190,19 @@
     <div class="row g-4">
       <div class="col-md-6">
         <h4>Quand partir ?</h4>
-        <p>De mai à octobre pour éviter la saison des pluies et profiter des plages.</p>
+        <p>La meilleure période est de novembre à mai pour profiter du climat sec et des plages.</p>
       </div>
       <div class="col-md-6">
         <h4>Durée du séjour</h4>
-        <p>Entre 7 et 14 jours selon les excursions et circuits choisis.</p>
+        <p>Entre 5 et 12 jours selon les excursions et le circuit choisi.</p>
       </div>
       <div class="col-md-6">
         <h4>Questions pratiques</h4>
-        <p>Visa, vaccins, assurance voyage, vêtements adaptés et protection solaire.</p>
+        <p>Visa, vaccins, assurance voyage et vêtements adaptés pour chaleur et soleil.</p>
       </div>
       <div class="col-md-6">
         <h4>Conseils supplémentaires</h4>
-        <p>Réservez les activités à l’avance et privilégiez les guides locaux pour une immersion authentique.</p>
+        <p>Réservez les excursions à l'avance et privilégiez les guides francophones pour une meilleure expérience.</p>
       </div>
     </div>
   </section>

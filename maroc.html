@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sénégal – Découverte | Afriqiya Tours</title>
+  <title>Maroc – Découverte | Afriqiya Tours</title>
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -33,14 +33,11 @@
 
     /* Hero */
     .hero { min-height:600px; position:relative; display:flex; align-items:center; justify-content:center; color:#fff; text-shadow:0 4px 18px rgba(0,0,0,.45); padding-top:5.2rem; padding-bottom:5.2rem; overflow:hidden; }
+    .hero iframe { position: absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:0; pointer-events:none; }
     .hero::after { content:""; position:absolute; inset:0; background: linear-gradient(180deg, rgba(13,27,42,0.30), rgba(13,27,42,0.55)); z-index:1; }
     .hero-content { position:relative; z-index:2; text-align:center; max-width:980px; padding:0 18px; }
     .hero h1 { font-weight:700; margin-bottom:.5rem; font-size:2.5rem; }
     .hero p { color:#f1f1f1; max-width:880px; margin:0 auto 1.25rem; }
-
-    /* Video YouTube */
-    .video-container { position:absolute; top:0; left:0; width:100%; height:100%; overflow:hidden; z-index:0; }
-    .video-container iframe { width:100%; height:100%; object-fit:cover; }
 
     /* Section titles */
     .section-title { color: var(--brand-dark); font-weight:700; margin-bottom:.5rem; font-size:1.8rem; }
@@ -73,55 +70,53 @@
   </style>
 </head>
 <body id="top">
+
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top">
   <div class="container flex-column text-center">
-    <a class="navbar-brand fw-bold fs-3 mb-2" href="/index.html">Afriqiya <span class="brand-accent">Tours</span></a>
+    <a class="navbar-brand fw-bold fs-3 mb-2" href="index.html">Afriqiya <span class="brand-accent">Tours</span></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-center" id="mainNav">
       <ul class="navbar-nav mb-2 mb-lg-0">
-       
+        
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Destinations</a>
          <ul class="dropdown-menu" aria-labelledby="destDropdown">
-            <li><a class="dropdown-item" href="/destinations/kenya.html">Kenya</a></li>
-            <li><a class="dropdown-item" href="/destinations/tanzanie.html">Tanzanie</a></li>
-            <li><a class="dropdown-item" href="/destinations/senegal.html">Sénégal</a></li>
-            <li><a class="dropdown-item" href="/destinations/maroc.html">Maroc</a></li>
-            <li><a class="dropdown-item" href="/destinations/afrique-du-sud.html">Afrique du Sud</a></li>
-            <li><a class="dropdown-item" href="/destinations/egypte.html">Égypte</a></li>
-            <li><a class="dropdown-item" href="/destinations/namibie.html">Namibie</a></li>
-            <li><a class="dropdown-item" href="/destinations/madagascar.html">Madagascar</a></li>
-            <li><a class="dropdown-item" href="/destinations/ghana.html">Ghana</a></li>
+            <li><a class="dropdown-item" href="kenya.html">Kenya</a></li>
+            <li><a class="dropdown-item" href="tanzanie.html">Tanzanie</a></li>
+            <li><a class="dropdown-item" href="senegal.html">Sénégal</a></li>
+            <li><a class="dropdown-item" href="maroc.html">Maroc</a></li>
+            <li><a class="dropdown-item" href="afrique-du-sud.html">Afrique du Sud</a></li>
+            <li><a class="dropdown-item" href="egypte.html">Égypte</a></li>
+            <li><a class="dropdown-item" href="namibie.html">Namibie</a></li>
+            <li><a class="dropdown-item" href="madagascar.html">Madagascar</a></li>
+            <li><a class="dropdown-item" href="ghana.html">Ghana</a></li>
           </ul>
         </li>
-        <li class="nav-item"><a class="nav-link" href="/index.html#circuits">Circuits</a></li>
-        <li class="nav-item"><a class="nav-link" href="/index.html#services">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="/index.html#blog">Blog</a></li>
-        <li class="nav-item"><a class="nav-link" href="/a-propos.html">À propos</a></li>
-        <li class="nav-item"><a class="nav-link" href="/connecter.html">Connecter</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#circuits">Circuits</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#blog">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="a-propos.html">À propos</a></li>
+        <li class="nav-item"><a class="nav-link" href="connecter.html">Connecter</a></li>
       </ul>
-      <a href="/contact.html" class="btn cta-reserve ms-lg-3">Réservez maintenant</a>
+      <a href="contact.html" class="btn cta-reserve ms-lg-3">Réservez maintenant</a>
     </div>
   </div>
 </nav>
 
 <!-- HERO -->
 <header id="accueil" class="hero d-flex align-items-center justify-content-center">
-  <div class="video-container">
-    <iframe 
-      src="https://www.youtube.com/embed/VstLXH6O9RA?autoplay=1&mute=1&loop=1&playlist=VstLXH6O9RA" 
-      title="YouTube video player" 
-      frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-      allowfullscreen>
-    </iframe>
-  </div>
+  <iframe 
+    src="https://www.youtube.com/embed/D4mlRPaVZR8?autoplay=1&mute=1&loop=1&playlist=D4mlRPaVZR8" 
+    title="YouTube video player" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
   <div class="hero-content text-center">
-    <h1 class="display-4 fw-bold mb-3">Sénégal – Découverte</h1>
-    <p class="lead mx-auto mb-4">Plages magnifiques, culture vibrante et immersion authentique au cœur de l'Afrique de l'Ouest.</p>
+    <h1 class="display-4 fw-bold mb-3">Maroc – Découverte</h1>
+    <p class="lead mx-auto mb-4">Villes impériales, paysages désertiques et montagnes majestueuses pour une immersion totale.</p>
     <a href="#destinations" class="btn btn-cta btn-lg px-4">Découvrir les options</a>
   </div>
 </header>
@@ -130,54 +125,54 @@
 
   <!-- GRID DES OPTIONS -->
   <section id="destinations" class="py-5">
-    <h2 class="section-title text-center mb-4">Nos options au Sénégal</h2>
+    <h2 class="section-title text-center mb-4">Nos options au Maroc</h2>
     <div class="card-grid">
 
       <!-- Card 1 -->
       <div class="card-slider">
-        <img src="/destination.images/African Renaissance Monument                📍Dakar, Senegal.jpeg" alt="Tour Dakar">
+        <img src="/destination.images/🫧.jpeg" alt="Marrakech">
         <div class="card-body-slider">
-          <h5 class="card-title-slider">Tour de Dakar</h5>
-          <p class="card-text-slider">Découverte de la capitale avec guide francophone et visite des principaux sites culturels.</p>
+          <h5 class="card-title-slider">Marrakech & Médina</h5>
+          <p class="card-text-slider">Visite des souks, palais et jardins emblématiques de la ville rouge.</p>
           <div class="price-slider">
-            <span class="price-item active">500 € / 4 jours / voyageur</span>
-            <span class="price-item">550 € / 6 jours / voyageur</span>
-            <span class="price-item">600 € / 8 jours / voyageur</span>
-            <span class="price-item">450 € / 3 jours / voyageur</span>
+            <span class="price-item active">500 € / 8 jours / voyageur</span>
+            <span class="price-item">550 € / 10 jours / voyageur</span>
+            <span class="price-item">600 € / 12 jours / voyageur</span>
+            <span class="price-item">450 € / 5 jours / voyageur</span>
           </div>
-          <a href="/contact.html" class="mt-auto btn btn-outline-primary">Réserver</a>
+          <a href="contact.html" class="mt-auto btn btn-outline-primary">Réserver</a>
         </div>
       </div>
 
       <!-- Card 2 -->
       <div class="card-slider">
-        <img src="/destination.images/Gorée _ La place de l'Europe devient la place de la liberté et de la dignité humaine.jpeg" alt="Ile de Gorée">
+        <img src="/destination.images/📍rainbow street, fes.jpeg" alt="Fès">
         <div class="card-body-slider">
-          <h5 class="card-title-slider">Ile de Gorée</h5>
-          <p class="card-text-slider">Excursion historique sur l'île, site classé au patrimoine mondial de l'UNESCO.</p>
+          <h5 class="card-title-slider">Fès & Artisanat</h5>
+          <p class="card-text-slider">Découverte de la ville impériale et de ses ateliers traditionnels.</p>
           <div class="price-slider">
-            <span class="price-item active">150 € / 4 jours / voyageur</span>
-            <span class="price-item">180 € / 6 jours / voyageur</span>
-            <span class="price-item">200 € / 8 jours / voyageur</span>
-            <span class="price-item">120 € / 2 jours / voyageur</span>
+            <span class="price-item active">450 € / 8 jours / voyageur</span>
+            <span class="price-item">500 € / 10 jours / voyageur</span>
+            <span class="price-item">550 € / 12 jours / voyageur</span>
+            <span class="price-item">400 € / 5 jours / voyageur</span>
           </div>
-          <a href="/contact.html" class="mt-auto btn btn-outline-primary">Réserver</a>
+          <a href="contact.html" class="mt-auto btn btn-outline-primary">Réserver</a>
         </div>
       </div>
 
       <!-- Card 3 -->
       <div class="card-slider">
-        <img src="/destination.images/Sine Saloum.jpeg" alt="Saloum">
+        <img src="/destination.images/Merzouga desert 🇲🇦.jpeg" alt="Merzouga">
         <div class="card-body-slider">
-          <h5 class="card-title-slider">Delta du Saloum</h5>
-          <p class="card-text-slider">Balades en pirogue et découverte de la faune et flore uniques du delta du Saloum.</p>
+          <h5 class="card-title-slider">Merzouga & Désert</h5>
+          <p class="card-text-slider">Excursion dans le désert du Sahara, nuit en bivouac et balade à dos de chameau.</p>
           <div class="price-slider">
-            <span class="price-item active">700 € / 8 jours / voyageur</span>
-            <span class="price-item">750 € / 10 jours / voyageur</span>
-            <span class="price-item">800 € / 12 jours / voyageur</span>
-            <span class="price-item">650 € / 5 jours / voyageur</span>
+            <span class="price-item active">600 € / 8 jours / voyageur</span>
+            <span class="price-item">650 € / 10 jours / voyageur</span>
+            <span class="price-item">700 € / 12 jours / voyageur</span>
+            <span class="price-item">550 € / 5 jours / voyageur</span>
           </div>
-          <a href="/contact.html" class="mt-auto btn btn-outline-primary">Réserver</a>
+          <a href="contact.html" class="mt-auto btn btn-outline-primary">Réserver</a>
         </div>
       </div>
 
@@ -190,25 +185,24 @@
     <div class="row g-4">
       <div class="col-md-6">
         <h4>Quand partir ?</h4>
-        <p>La meilleure période est de novembre à mai pour profiter du climat sec et des plages.</p>
+        <p>De mars à mai ou septembre à novembre pour un climat agréable et des excursions confortables.</p>
       </div>
       <div class="col-md-6">
         <h4>Durée du séjour</h4>
-        <p>Entre 5 et 12 jours selon les excursions et le circuit choisi.</p>
+        <p>Entre 5 et 12 jours selon les circuits choisis.</p>
       </div>
       <div class="col-md-6">
         <h4>Questions pratiques</h4>
-        <p>Visa, vaccins, assurance voyage et vêtements adaptés pour chaleur et soleil.</p>
+        <p>Visa, vaccins, assurance voyage, vêtements légers pour la journée et adaptés aux soirées plus fraîches.</p>
       </div>
       <div class="col-md-6">
         <h4>Conseils supplémentaires</h4>
-        <p>Réservez les excursions à l'avance et privilégiez les guides francophones pour une meilleure expérience.</p>
+        <p>Réservez les excursions à l’avance et privilégiez les guides francophones pour une meilleure immersion.</p>
       </div>
     </div>
   </section>
 
 </main>
-
 <!-- FOOTER -->
 <footer class="footer mt-5 bg-dark text-light py-5">
   <div class="container text-center">
